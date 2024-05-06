@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sezioni_paragrafos",
+  "info": {
+    "displayName": "Paragrafo",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Sottotitolo": {
+      "type": "string"
+    },
+    "Testo": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

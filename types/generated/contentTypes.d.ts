@@ -362,29 +362,35 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestoTesto extends Schema.CollectionType {
-  collectionName: 'testos';
+export interface ApiArticoloArticolo extends Schema.CollectionType {
+  collectionName: 'articolos';
   info: {
-    singularName: 'testo';
-    pluralName: 'testos';
-    displayName: 'Testo';
+    singularName: 'articolo';
+    pluralName: 'articolos';
+    displayName: 'Articolo';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Body: Attribute.Text;
+    Titolo: Attribute.String;
+    Cover: Attribute.Media;
+    Paragrafo: Attribute.Component<'sezioni.paragrafo', true>;
+    Data: Attribute.Date;
+    slug: Attribute.UID<'api::articolo.articolo', 'Titolo'>;
+    Autore: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::testo.testo',
+      'api::articolo.articolo',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::testo.testo',
+      'api::articolo.articolo',
       'oneToOne',
       'admin::user'
     > &
@@ -828,7 +834,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::testo.testo': ApiTestoTesto;
+      'api::articolo.articolo': ApiArticoloArticolo;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

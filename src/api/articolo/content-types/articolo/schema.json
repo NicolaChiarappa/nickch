@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articolos",
+  "info": {
+    "singularName": "articolo",
+    "pluralName": "articolos",
+    "displayName": "Articolo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
+    "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Paragrafo": {
+      "displayName": "Paragrafo",
+      "type": "component",
+      "repeatable": true,
+      "component": "sezioni.paragrafo"
+    },
+    "Data": {
+      "type": "date"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Titolo"
+    },
+    "Autore": {
+      "type": "string"
+    }
+  }
+}
