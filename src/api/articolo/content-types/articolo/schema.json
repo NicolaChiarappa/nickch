@@ -26,10 +26,10 @@
         "audios"
       ]
     },
-    "Paragrafo": {
+    "Contenuto": {
       "displayName": "Paragrafo",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "sezioni.paragrafo"
     },
     "Data": {
