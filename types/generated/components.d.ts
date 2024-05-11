@@ -8,7 +8,7 @@ export interface SezioniParagrafo extends Schema.Component {
     description: '';
   };
   attributes: {
-    Testo: Attribute.Blocks;
+    Testo: Attribute.RichText;
   };
 }
 

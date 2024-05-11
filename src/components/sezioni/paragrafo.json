@@ -8,7 +8,7 @@
   "options": {},
   "attributes": {
     "Testo": {
-      "type": "blocks"
+      "type": "richtext"
     }
   }
 }
